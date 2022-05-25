@@ -17,7 +17,7 @@ if __name__ == "__main__":
     baixar_arquivo('https://www.gov.br/ans/pt-br/arquivos/assuntos/consumidor/o-que-seu-plano-deve-cobrir/Anexo_III_DC_2021_RN_465.2021.v2.pdf', 'Anexo 3.pdf')
     baixar_arquivo('https://www.gov.br/ans/pt-br/arquivos/assuntos/consumidor/o-que-seu-plano-deve-cobrir/Anexo_IV_PROUT_2021_RN_465.2021.v2.pdf', 'Anexo 4.pdf')
 
-    z = zipfile.ZipFile('Anexos.zip', 'w', zipfile.ZIP_DEFLATED)
+z = zipfile.ZipFile('Anexos.zip', 'w', zipfile.ZIP_DEFLATED)
 z.write('Anexo 1.pdf')
 z.write('Anexo 1.xlsx')
 z.write('Anexo 2.pdf')
