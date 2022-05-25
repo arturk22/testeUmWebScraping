@@ -1,3 +1,4 @@
+import zipfile
 import requests
 
 def baixar_arquivo(url, endereco):
@@ -15,3 +16,11 @@ if __name__ == "__main__":
     baixar_arquivo('https://www.gov.br/ans/pt-br/arquivos/assuntos/consumidor/o-que-seu-plano-deve-cobrir/Anexo_II_DUT_2021_RN_465.2021_tea.br_RN473_RN477_RN478_RN480_RN513_RN536.pdf', 'Anexo 2.pdf')
     baixar_arquivo('https://www.gov.br/ans/pt-br/arquivos/assuntos/consumidor/o-que-seu-plano-deve-cobrir/Anexo_III_DC_2021_RN_465.2021.v2.pdf', 'Anexo 3.pdf')
     baixar_arquivo('https://www.gov.br/ans/pt-br/arquivos/assuntos/consumidor/o-que-seu-plano-deve-cobrir/Anexo_IV_PROUT_2021_RN_465.2021.v2.pdf', 'Anexo 4.pdf')
+
+    z = zipfile.ZipFile('Anexos.zip', 'w', zipfile.ZIP_DEFLATED)
+z.write('Anexo 1.pdf')
+z.write('Anexo 1.xlsx')
+z.write('Anexo 2.pdf')
+z.write('Anexo 3.pdf')
+z.write('Anexo 4.pdf')
+z.close()
